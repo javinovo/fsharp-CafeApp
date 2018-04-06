@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        { // https://fake.build/fake-debugging.html
+            "name": "Debug My Build Script",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "tools\\fake\\fake.dll",
+            "args": ["run", "tools\\build.fsx", "--fsiargs", "--debug:portable --optimize-"],
+            "cwd": "${workspaceRoot}",
+            "stopAtEntry": false,
+            "console": "internalConsole"
+        }
+    ]
+}
