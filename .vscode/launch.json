@@ -2,7 +2,7 @@
     "version": "0.2.0",
     "configurations": [
         { // https://fake.build/fake-debugging.html
-            "name": "Debug My Build Script",
+            "name": "Debug Build Script",
             "type": "coreclr",
             "request": "launch",
             "program": "tools\\fake\\fake.dll",
@@ -10,6 +10,15 @@
             "cwd": "${workspaceRoot}",
             "stopAtEntry": false,
             "console": "internalConsole"
-        }
+        },
+        { // Missing debug support
+            "name": "Launch Tests",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "dotnet",
+            "args": ["test"],
+            "cwd": "${workspaceRoot}\\src",
+            "stopAtEntry": false
+        }        
     ]
 }
